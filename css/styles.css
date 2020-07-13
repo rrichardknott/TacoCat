@@ -1,0 +1,66 @@
+﻿body {
+    font-family: 'Garamond', sans-serif!important;
+}
+
+a #tacoCatImage{
+    border-radius: 50%;
+}
+
+h3 {
+    text-align: justify!important;
+}
+
+p span{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 36px;
+    color: #351ae2;
+}
+
+#title {
+    width: 100%;
+    letter-spacing: .50em;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    color: black;
+    text-align: center;
+    padding-left: 3.5%;
+    text-transform: uppercase;
+}
+
+#phrase, #resultText {
+    height: 50px;
+    background-color: #FFF;
+    font-size: 26px;
+    text-align: left;
+    overflow: hidden;
+}
+
+#submitButton, #clearButton {
+    background-color: black;
+    color: #FFF;
+    border: .5px solid black;
+    width: 100%;
+    font-family: Century;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 2%;
+}
+
+#submitButton:hover, #clearButton:hover {
+    background-color: #FFF;
+    color: black;
+}
+
+#errorAlert {
+    color: red;
+}
+
+#errorAlertButton {
+    color: red;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 2%;
+}
