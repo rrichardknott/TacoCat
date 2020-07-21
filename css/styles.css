@@ -10,11 +10,8 @@ h3 {
     text-align: justify!important;
 }
 
-p span{
-    font-style: italic;
-    font-weight: bold;
-    font-size: 36px;
-    color: #351ae2;
+#mainContainer{
+    height: 40vh;
 }
 
 #title {
@@ -63,4 +60,27 @@ p span{
     text-transform: uppercase;
     width: 100%;
     margin-bottom: 2%;
+}
+
+/*===============Contact===========================================*/
+
+#contact {
+    background-color: black;
+    color: white;
+    padding: 3% 7%;
+}
+
+#contactButton {
+    border: 1px solid white;
+    text-transform: uppercase;
+    width: 15%;
+}
+
+#contact label, #contact h2, #contact label, #contact p {
+    font-size: 28px;
+}
+
+#contact form {
+    position: relative;
+    left: 17%;
 }
