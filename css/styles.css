@@ -70,6 +70,11 @@ h3 {
     padding: 3% 7%;
 }
 
+#contact p{
+    text-align: center;
+    width: 70%;
+}
+
 #contactButton {
     border: 1px solid white;
     text-transform: uppercase;
@@ -80,7 +85,138 @@ h3 {
     font-size: 28px;
 }
 
+#contact h2{
+    text-align: center;
+}
+
 #contact form {
     position: relative;
     left: 17%;
+}
+
+/*=============Media Queries=============*/
+
+/*==============iPad Front Page===================*/
+@media only screen and (min-width: 768px) and (max-width: 999px){
+    
+    nav{
+        padding: 0 17% 0 13%!important;        
+    }    
+    
+    #mainContainer {
+        width: 100%;
+        padding: 0 20% 0 10%;
+        margin-bottom: 5%;
+        font-size: 42px;
+    }    
+
+    #contact {
+        width: 100%;
+        position: relative;
+        right: 5%;
+       
+    }  
+
+    #contact p{
+        font-size: 42px;
+        text-align: justify;
+    }
+
+    #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton{
+        position: relative;
+        font-size: 36px;
+        width: 120%;       
+        right: 10%;        
+    }    
+
+    #contact #email, #contact #labelEmail{
+        position: relative;
+        font-size: 36px;       
+        width: 120%;
+        left: 3%;
+    }
+    #contact #name, #contact #labelName {
+        position: relative;
+        font-size: 36px;
+        width: 120%;
+        right: 21%;       
+    }
+
+    /*=============iPad Code Page================*/
+    #codeContainer #codeColumn, pre[class*="language-"] {
+        position: relative;
+        width: 120%;
+        right: 15%;
+    }
+
+    #codeContainer #codeColumn, code[class*="language-"] {
+        position: relative;
+        font-size: 120%;
+    }
+
+}
+
+/*=============iPhone Front Page===============*/
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    #mainContainer {
+        width: 100%;
+    }
+
+    #mainContainer h3 {
+        font-size: 20px;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    #contact {
+        width: 100%;
+        margin-top: 18%;
+    }
+
+    #contact p {
+        text-align: justify;
+        font-size: 20px;
+    }
+
+    #contact form {
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact form input, #contact form label, #contact form textarea {
+        font-size: 20px;
+        position: relative;
+        right: 17%;
+    }
+
+    #contact form #contactButton {
+        font-size: 15px;
+        position: relative;
+        right: 17%;
+        width: 100%;
+    }
+    /*=============iPhone Code Page================*/
+    #codeContainer #codeColumn, pre[class*="language-"] {
+        position: relative;
+        width: 150%;
+        right: 25%;
+    }
+
+    #codeContainer #codeColumn, code[class*="language-"] {
+        position: relative;
+        font-size: 95%;
+    }
+
+    /*=============iPhone Solve Page================*/
+    #solve{
+        position: relative;
+        text-align: center;
+    }
+
+    #solve #title{
+        position: relative;
+        font-size: 30px;
+        left: 3%;
+    }
 }
