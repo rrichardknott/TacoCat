@@ -62,18 +62,17 @@
             <div class="col-lg-12 text-center" id="codeColumn">
                 <h1 class="mt-5">Taco Cat Code</h1>
                 <pre>
-                <code class="language-javascript">
-                        $("#errorAlert").hide();
-                        $("#errorAlertButton").hide();
-
-                        $("#submitButton").click(function () {
-                            if ($("#phrase").val().length == 0) {
-                                $("#errorAlertButton").show();
-                                $("#submitButton").hide();
-                                $("#clearButton").hide();
-                                $("#errorAlert").show();
-                                return;
-                            }
+                    <code class="language-javascript">
+                        $("#phrase").keypress(function (e) {
+                        var keycode = (e.keycode ? event.keycode : event.which);
+                        if (keycode == "13") {
+                        if ($("#phrase").val().length == 0) {
+                        $("#errorAlertButton").show();
+                        $("#submitButton").hide();
+                        $("#clearButton").hide();
+                        $("#errorAlert").show();
+                        return;
+                        }
 
                         let lettersOnly = /[\W0-9_]/g;
                         let cleanPhrase = $("#phrase").val().toLowerCase().replace(lettersOnly, "");
@@ -82,26 +81,33 @@
                         $("#resultText").val(reversedPhrase);
 
                         if (cleanPhrase === reversedPhrase) {
-                            $("#title").text("It's a Palindrome!");
+                        $("#title").html(cleanPhrase + " spelled backwards is " + reversedPhrase + ".<p><br />It's a Palindrome!</p>");
                         } else {
-                            $("#title").text("It's not a Palindrome.");
-                            }
+                        $("#title").html(cleanPhrase + " spelled backwards is " + reversedPhrase + ".<p><br />It's not a Palindrome.</p>");
+                        }
+                        }
                         });
 
-                        $("#errorAlertButton").on("click", function () {
-                            $("#errorAlertButton").hide();
-                            $("#phrase").val("").focus();
-                            $("#submitButton").show();
-                            $("#clearButton").show();
-                            $("#title").text("taco cat");
-                            $("#resultText").val("");
-                            $("#errorAlert").hide();
-                        });
+                        $("#submitButton").click(function () {
+                        if ($("#phrase").val().length == 0) {
+                        $("#errorAlertButton").show();
+                        $("#submitButton").hide();
+                        $("#clearButton").hide();
+                        $("#errorAlert").show();
+                        return;
+                        }
 
-                        $("#clearButton").on("click", function () {
-                            $("#phrase").val("").focus();
-                            $("#title").text("taco cat");
-                            $("#resultText").val("");
+                        let lettersOnly = /[\W0-9_]/g;
+                        let cleanPhrase = $("#phrase").val().toLowerCase().replace(lettersOnly, "");
+                        let reversedPhrase = cleanPhrase.split("").reverse().join("");
+
+                        $("#resultText").val(reversedPhrase);
+
+                        if (cleanPhrase === reversedPhrase) {
+                        $("#title").html(cleanPhrase + " spelled backwards is " + reversedPhrase + ".<p><br />It's a Palindrome!</p>");
+                        } else {
+                        $("#title").html(cleanPhrase + " spelled backwards is " + reversedPhrase + ".<p><br />It's not a Palindrome.</p>");
+                        }
                         });
                     </code>
                  </pre>

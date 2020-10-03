@@ -20,21 +20,25 @@ h3 {
 
 #title {
     width: 100%;
-    letter-spacing: .50em;
+    letter-spacing: .2em;
     margin-top: 7%;
     margin-bottom: 7%;
     color: black;
     text-align: center;
     padding-left: 3.5%;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
-#phrase, #resultText {
+#phrase {
     height: 50px;
     background-color: #FFF;
     font-size: 26px;
-    text-align: left;
+    text-align: center;
     overflow: hidden;
+}
+
+#resultText{
+    display: none;
 }
 
 #submitButton, #clearButton {
