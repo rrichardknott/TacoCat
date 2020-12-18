@@ -32,10 +32,7 @@
                         <a class="nav-link" href="/Index.html">
                             Home
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html">Try it Out</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="/Code.html">Code</a>
                     </li>
@@ -55,93 +52,133 @@
             </div>
         </div>
     </nav>
-
-    <!-- Page Content -->
-    <div class="container" id="mainContainer">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Taco Cat Project</h1>
-                <h3 id="mainContainerH3">The Taco Cat project is a program that demonstrates whether or not a word and/or phrase is a palindrome.  Palindrome words are those which read the same way when written backwards.  For example, the words 'Taco Cat' when spelled backwards become Taco Cat.  The same for 'Nurses Run'.  When this happens, the word and/or phrase is by definition a palindrome.</h3>
+    <div id="solveBody">
+        <!-- Page Content -->
+        <div class="container-fluid" id="mainContainer">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="mt-5">Taco Cat Project</h1>
+                    <p id="mainContainerH3">The Taco Cat project is a program that demonstrates whether or not a word and/or phrase is a palindrome.  Palindrome words are those which read the same way when written backwards.  For example, the words 'Taco Cat' when spelled backwards become Taco Cat.  The same for 'Nurses Run'.  When this happens, the word and/or phrase is by definition a palindrome.</p>
+                </div>
             </div>
         </div>
+
+        <!--Taco Cat Begins-->
+        <div class="container" id="solve">
+
+            <div class="row" id="solveTacoCat">
+                <p class="col-12 h1" id="title">Is It a Palindrome?</p>
+            </div>
+
+            <div class="row" id="solveEnterWordAndButtons">
+                <div class="col-6 offset-3">
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <!--<p>Enter word or phrase</p>-->
+                                <input type="text" class="form-control" id="phrase" maxlength="43" placeholder="Enter word or phrase" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <textarea id="resultText" class="form-control" readonly maxlength="43"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col">
+                            <h2 id="errorAlert">Invalid Entry</h2>
+                            <button id="errorAlertButton" class="btn btn-warning">Reset</button>
+                            <button type="submit" id="submitButton" class="btn">Submit</button>
+                            <button type="submit" id="clearButton" class="btn">Clear</button>
+                        </div>
+                    </div>
+
+                </div><!--end column-->
+            </div><!--end row-->
+        </div><!--Taco Cat Ends-->
+        <!--Section: Contact v.2-->
+        <section class="container-fluid" id="contact">
+            <!--Section heading-->
+            <div id="contactMeTextAndSentence">
+                <h2 class="font-weight-bold my-4" id="contactMe">CONTACT ME</h2>
+                <!--Section description-->
+                <p class="w-responsive mx-auto mb-5"> Do you have any questions? Please do not hesitate to contact me directly. I will respond to your email within a matter of hours to help you.</p>
+            </div>
+            <div class="row" id="contactFieldsSection">
+
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5>">
+                    <form>
+                        <!--id="contact-form" name="contact-form"-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" id="labelName" class="">Your name</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control" required />
+                                    <label for="email" id="labelEmail" class="">Your email</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" id="labelSubject" class="">Subject</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="message" id="labelMessage">Your message</label>
+                                </div>
+
+                                <div class="text-center text-md-left">
+                                    <a class="btn btn-info'" id="contactButton">Send</a>
+                                </div><br />
+                                <!--ReCaptcha Starts-->
+                                <div class="g-recaptcha" data-sitekey="6LeBG8AZAAAAACRDZ28ak1Mo8trMZdmQ8IaFV1xn"></div>
+                                <!--ReCaptcha Ends-->
+                                <div class="status"></div>
+                            </div>
+
+                        </div>
+                        <!--Grid row-->
+                    </form>
+
+
+                    <!--Grid column-->
+                    <!--Grid column-->
+
+                </div>
+            </div>
+        </section>
+        <!--Section: Contact v.2-->
     </div>
-
-    <!--Section: Contact v.2-->
-    <section class="container-fluid" id="contact">
-        <!--Section heading-->
-        <h2 class="font-weight-bold my-4" id="contactMe">CONTACT ME</h2>
-        <!--Section description-->
-        <p class="w-responsive mx-auto mb-5"> Do you have any questions? Please do not hesitate to contact me directly. I will respond to your email within a matter of hours to help you.</p>
-
-        <div class="row">
-
-            <!--Grid column-->
-            <div class="col-md-9 mb-md-0 mb-5>">
-                <form>
-                    <!--id="contact-form" name="contact-form"-->
-                    <!--Grid row-->
-                    <div class="row">
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control">
-                                <label for="name" id="labelName" class="">Your name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control" required />
-                                <label for="email" id="labelEmail" class="">Your email</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                    <!--Grid row-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control">
-                                <label for="subject" id="labelSubject" class="">Subject</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Grid row-->
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
-                        <div class="col-md-12">
-
-                            <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                <label for="message" id="labelMessage">Your message</label>
-                            </div>
-
-                            <div class="text-center text-md-left">
-                                <a class="btn btn-info'" id="contactButton">Send</a>
-                            </div><br />
-                            <!--ReCaptcha Starts-->
-                            <div class="g-recaptcha" data-sitekey="6LeBG8AZAAAAACRDZ28ak1Mo8trMZdmQ8IaFV1xn"></div>
-                            <!--ReCaptcha Ends-->
-                            <div class="status"></div>
-                        </div>
-
-                    </div>
-                    <!--Grid row-->
-                </form>
-
-
-                <!--Grid column-->
-                <!--Grid column-->
-
-            </div>
-        </div>
-    </section>
-    <!--Section: Contact v.2-->
-
 
 
     <script src="js/jquery-3.5.1.slim.min.js"></script>

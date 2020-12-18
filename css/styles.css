@@ -14,19 +14,61 @@ h3 {
     text-align: justify!important;
 }
 
-#mainContainer{
+#mainContainer {
     height: 40vh;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    
 }
+
+#mainContainer p{
+    font-size: 36px;
+    text-align:justify;
+    
+}
+
+#mainContainer h1 {
+    font-weight: bold;
+}
+
+#solveBody{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    
+}
+
+
+#solve {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+
+    
+    
+    
+    
+}
+
+#contact{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+}
+
+
 
 #title {
     width: 100%;
     letter-spacing: .2em;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    
+    /*margin-bottom: 7%;*/
     color: black;
     text-align: center;
-    padding-left: 3.5%;
-    text-transform: capitalize;
+    /*padding-left: 3.5%;*/
+    /*text-transform: capitalize;*/
 }
 
 #phrase {
@@ -73,12 +115,24 @@ h3 {
 /*===============Contact===========================================*/
 
 #contact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+
     background-color: black;
-    color: white;
-    padding: 3% 7%;
+    color: white;    
 }
 
-#contact p{
+#contactMeTextAndSentence{
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+#contactFieldsSection{
+    grid-column: 2 / 5;
+}
+
+#contact p {
     text-align: center;
     width: 70%;
 }
@@ -86,7 +140,7 @@ h3 {
 #contactButton {
     border: 1px solid white;
     text-transform: uppercase;
-    width: 15%;
+    
 }
 
 #contact label, #contact h2, #contact label, #contact p {
@@ -97,26 +151,56 @@ h3 {
     text-align: center;
 }
 
-#contact form {
-    position: relative;
-    left: 17%;
-}
+
 
 /*=============Media Queries=============*/
 
+
+@media only screen and (max-width: 1660px){
+    #mainContainer{
+        margin-bottom: 50%;
+    }
+}
+
+
 /*==============iPad Front Page===================*/
 @media only screen and (min-width: 768px) and (max-width: 999px){
+
     
     nav{
         padding: 0 17% 0 13%!important;        
-    }    
+    }  
+    
+    #solveBody{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
     
     #mainContainer {
-        width: 100%;
-        padding: 0 20% 0 10%;
-        margin-bottom: 5%;
-        font-size: 42px;
-    }    
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-bottom: 17%;
+    }   
+    
+    #mainContainer p{
+        font-size: 38px;
+        text-align: justify;
+    }
+
+    #solve{
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-bottom: 7%;
+    }
+
+    #phrase{
+        font-size: 38px;
+    }
+
+    #submitButton, #clearButton{
+        font-size: 28px;
+    }
 
     #contact {
         width: 100%;
@@ -130,11 +214,11 @@ h3 {
         text-align: justify;
     }
 
-    #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton{
+    #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton {
         position: relative;
         font-size: 36px;
-        width: 120%;       
-        right: 10%;        
+        width: 120%;
+        right: 10%;
     }    
 
     #contact #email, #contact #labelEmail{
@@ -150,7 +234,7 @@ h3 {
         right: 21%;       
     }
 
-    /*=============iPad Code Page================*/
+/*/=============iPad Code Page================*/
     #codeContainer #codeColumn, pre[class*="language-"] {
         position: relative;
         width: 120%;
@@ -165,119 +249,269 @@ h3 {
 }
 
 /*=============iPhone Front Page===============*/
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 611px) and (max-width: 767px) {
 
-    #mainContainer {
-        width: 100%;
+    #solveBody {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
     }
 
-    #mainContainer h3 {
-        font-size: 20px;
-        padding-top: 2%;
-        padding-bottom: 5%;
+    #mainContainer {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-bottom: 40%;
+    }
+
+    
+
+    #mainContainer p {
+        font-size: 38px;
+        text-align: justify;
+    }
+
+    #solve {
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-bottom: 7%;
+        justify-content: center;
+
+    }
+
+
+    #phrase {
+        font-size: 38px;
+        width: 300px;
+    }
+
+    #submitButton, #clearButton {
+        font-size: 28px;
+        width: 300px;
     }
 
     #contact {
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
         width: 100%;
-        margin-top: 18%;
+        justify-content: center;
+        
+    }
+
+    #contactFieldsSection {
+        grid-column: 1 / 5;
+        padding: 0 20px 0 20px;
     }
 
     #contact p {
+        font-size: 42px;
         text-align: justify;
-        font-size: 20px;
     }
 
-    #contact form {
-        width: 100%;
-        text-align: center;
+    #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton {
+        
+        font-size: 36px;
+        
+        
     }
 
-    #contact form input, #contact form label, #contact form textarea {
-        font-size: 20px;
-        position: relative;
-        right: 17%;
+    #contact #email, #contact #labelEmail {
+        
+        font-size: 36px;
+        
     }
 
-    #contact form #contactButton {
-        font-size: 15px;
-        position: relative;
-        right: 17%;
-        width: 100%;
+    #contact #name, #contact #labelName {
+        
+        font-size: 36px;
+        
     }
-    /*=============iPhone Code Page================*/
+
+    #contactButton{
+        width: 200px;
+    }
+
+    /*/=============iPad Code Page================*/
     #codeContainer #codeColumn, pre[class*="language-"] {
         position: relative;
-        width: 150%;
-        right: 25%;
+        width: 120%;
+        right: 15%;
     }
 
     #codeContainer #codeColumn, code[class*="language-"] {
         position: relative;
-        font-size: 95%;
+        font-size: 120%;
     }
-
-    /*=============iPhone Solve Page================*/
-    #solve{
-        position: relative;
-        text-align: center;
-    }
-
-    #solve #title{
-        position: relative;
-        font-size: 30px;
-        left: 3%;
-    }    
 }
-/*=============Galaxy S5 Code Page================*/
 
-@media only screen and (min-width: 359px) and (max-width: 374px) {
+
+/*=======================================================================*/
+
+    @media only screen and (min-width: 462px) and (max-width: 767px) {
+
+        #solveBody {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+
+        #mainContainer {
+            grid-column: 1 / 5;
+            grid-row: 1;
+            margin-bottom: 40%;
+        }
+
+
+
+        #mainContainer p {
+            font-size: 32px;
+            text-align: justify;
+        }
+
+        #solve {
+            grid-column: 1 / 5;
+            grid-row: 2;
+            margin-bottom: 7%;
+            justify-content: center;
+        }
+
+
+        #phrase {
+            font-size: 38px;
+            width: 300px;
+        }
+
+        #submitButton, #clearButton {
+            font-size: 28px;
+            width: 300px;
+        }
+
+        #contact {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+            width: 100%;
+            justify-content: center;
+        }
+
+        #contactFieldsSection {
+            grid-column: 1 / 5;
+            padding: 0 20px 0 20px;
+        }
+
+        #contact p {
+            font-size: 42px;
+            text-align: justify;
+        }
+
+        #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton {
+            font-size: 36px;
+        }
+
+        #contact #email, #contact #labelEmail {
+            font-size: 36px;
+        }
+
+        #contact #name, #contact #labelName {
+            font-size: 36px;
+        }
+
+        #contactButton {
+            width: 200px;
+        }
+
+        /*=============iPad Code Page================*/
+        #codeContainer #codeColumn, pre[class*="language-"] {
+            position: relative;
+            width: 120%;
+            right: 15%;
+        }
+
+        #codeContainer #codeColumn, code[class*="language-"] {
+            position: relative;
+            font-size: 120%;
+        }
+    }
+/*==========================================================*/
+@media only screen and (max-width: 461px) {
+    #solveBody {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    #mainContainer {
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-bottom: 40%;
+    }
+
+
+
+        #mainContainer p {
+            font-size: 32px;
+            text-align: justify;
+        }
+
+    #solve {
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-bottom: 7%;
+        justify-content: center;
+    }
+
+
+    #phrase {
+        font-size: 38px;
+        width: 300px;
+    }
+
+    #submitButton, #clearButton {
+        font-size: 28px;
+        width: 300px;
+    }
+
+    #contact {
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #contactFieldsSection {
+        grid-column: 1 / 5;
+        padding: 0 20px 0 20px;
+    }
+
+    #contact p {
+        font-size: 42px;
+        text-align: justify;
+    }
+
+    #contact #subject, #contact #labelSubject, #contact #message, #contact #labelMessage, #contactButton {
+        font-size: 36px;
+    }
+
+    #contact #email, #contact #labelEmail {
+        font-size: 36px;
+    }
+
+    #contact #name, #contact #labelName {
+        font-size: 36px;
+    }
+
+    #contactButton {
+        width: 200px;
+    }
+
+    /*/=============iPad Code Page================*/
     #codeContainer #codeColumn, pre[class*="language-"] {
         position: relative;
-        width: 150%;
-        right: 25%;
+        width: 120%;
+        right: 15%;
     }
 
     #codeContainer #codeColumn, code[class*="language-"] {
         position: relative;
-        font-size: 95%;
+        font-size: 120%;
     }
-
-/*=============Galaxy S5 Contact Page================*/
-    #mainContainer {
-        width: 100%;
-    }
-
-    #mainContainer h3 {
-        font-size: 10px!important;
-        padding-top: 2%;
-        padding-bottom: 5%;
-    }
-
-    #contact {
-        width: 100%;
-        margin-top: 18%;
-    }
-
-    #contact p {
-        text-align: justify;
-        font-size: 10px;
-    }
-
-    #contact form {
-        width: 100%;
-        text-align: center;
-    }
-
-    #contact form input, #contact form label, #contact form textarea {
-        font-size: 10px;
-        position: relative;
-        right: 17%;
-    }
-
-    #contact form #contactButton {
-        font-size: 10px;
-        position: relative;
-        right: 17%;
-        width: 100%;
-    }
+}
 }
