@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href="/css/styles1.css" rel="stylesheet" />
+    <title>Palindrome Project</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="gridBody">
+
+    <!--tacoCatNavbar-->
+    <nav id="tacoCatNavbar" class="navbar navbar-expand-lg backgroundBlack static-top h4">
+        <div class="container-fluid pl-5 pr-5">
+            <a id="tacoCatLogo" class="navbar-brand" href="/Index1.html"> <img src="images/tacoCat.png" id="tacoCatImage" alt="Alternate Text" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars" id="navHamburgerMenu"></i>
+                <!--<span class="navbar-toggler-icon"></span>-->
+                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="/Index1.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="/Code.html">View Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="https://github.com/rrichardknott/TacoCat">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="https://richardknottportfolio.netlify.app">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link colorWhite" href="https://richardknottblog.azurewebsites.net">My Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--tacoCatDescription-->
+    <div id="tacoCatDescription">
+        <h1 class="mt-5 text-center">Taco Cat Project</h1>
+        <h4 class="text-justify">The Taco Cat project is a program that demonstrates whether or not a word and/or phrase is a palindrome.  Palindrome words are those which read the same way when written backwards.  For example, the words 'Taco Cat' when spelled backwards become Taco Cat.  The same for 'Nurses Run'.  When this happens, the word and/or phrase is by definition a palindrome. <br/><br/>You can view the javascript code by <a href="/Code.html">clicking here.</a></h4>
+    </div>
+
+    <!--tacoCatPalindrome-->
+    <div class="row mt-5 pl-5 pr-5" id="tacoCatPalindrome">
+        <div class="col">
+            <h1 class="text-center" id="title">Enter a Word or Phrase Below</h1>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <!--<p>Enter word or phrase</p>-->
+                        <input type="text" class="form-control text-center" id="phrase1" maxlength="43" placeholder="...is it a palindrome?" required />
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultTextContainer" class="form-group hidden">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="resultText" class="form-control" readonly maxlength="43"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col">
+                    <h2 id="errorAlert">Invalid Entry</h2>
+                    <button id="errorAlertButton" class="btn btn-warning">Reset</button>
+                    <button type="submit" id="submitButton" class="btn">Submit</button>
+                    <button type="submit" id="clearButton" class="btn">Clear</button>
+                </div>
+            </div>
+
+        </div><!--end column-->
+
+    </div>
+    <!--tacoCatPalindrome-->
+    <!--Felix The Cat Image-->
+    <div class="text-center animate__animated" id="felixCatImageContainer">
+        <h1 id="felixCatImageYeah"class="hidden colorBrightRed">It's a Palindrome...Yeah! Yeah! Yeah!</h1>
+        <img src="images/felixCat.jpg" class="img-fluid" id="felixCatImage" alt="Alternate Text" />
+    </div>
+
+    <div class="hidden text-center animate__animated" id="felixCatSadImageContainer">
+        <h1 class="colorBrightRed">Ahh...Shucks.  It's not a Palindrome, try again.</h1>
+        <img src="images/felixCatSad.jpg" class="img-fluid" id="felixCatSadImage" alt="Alternate Text" />
+    </div>
+
+
+    <!--Contact-->
+    <section class="container-fluid m-auto" id="contact">
+
+
+        <h2 class="font-weight-bold pt-4" id="contactMe">CONTACT ME</h2>
+
+        <h4 class="mb-5"> Do you have any questions? Please do not hesitate to contact me directly. I will respond to your email within a matter of hours to help you.</h4>
+
+        <div class="row" id="contactFieldsSection">
+
+
+            <div class="col-md-9">
+                <form>
+
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="md-form">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label for="name" id="labelName" class="">Your name</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="md-form">
+                                <input type="text" id="email" name="email" class="form-control" required />
+                                <label for="email" id="labelEmail" class="">Your email</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" id="labelSubject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="message" id="labelMessage">Your message</label>
+                            </div>
+
+                            <div class="text-center text-md-left">
+                                <a class="btn btn-info'" id="contactButton">Send</a>
+                            </div><br />
+                            <!--ReCaptcha Starts-->
+                            <div class="g-recaptcha" data-sitekey="6LeBG8AZAAAAACRDZ28ak1Mo8trMZdmQ8IaFV1xn"></div>
+                            <!--ReCaptcha Ends-->
+                            <div class="status"></div>
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/scripts1.js"></script>
+    <script src="js/meta.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
